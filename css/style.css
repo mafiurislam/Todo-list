@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 6px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #444B53;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #696F75;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+
+	display: grid;
+	place-items: center;
+	height: 100vh;
+
+	background-color: antiquewhite;
+}
+
+.gallery-component{
+/*	--size: 680px;*/
+}
+
+.gallery-component__large{
+	width: 680px;
+	
+	aspect-ratio: 1 / 0.5;
+
+	overflow: hidden;
+
+	border: 4px solid #fff;
+	border-radius: 6px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+	margin: 0 0 15px 0;
+}
+
+.gallery-component__large img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.gallery-component__thumbnails{
+	width: 680px;
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	overflow-x: scroll;
+	padding: 0 0 10px 0;
+}
+
+.gallery-component__thumbnails > img{
+	width: 100%;
+	height: 100px;
+	opacity:0.5;
+}
+
+
+.show-border{
+	border:3px solid red;
+}
+
+.fade{
+	opacity: 1!important;
+}
